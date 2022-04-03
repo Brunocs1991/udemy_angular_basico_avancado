@@ -22,6 +22,7 @@ export class AppComponent
     AfterViewInit,
     AfterViewChecked
 {
+  public destruir: boolean = true;
   public valor: number = 1;
   constructor() {}
 
@@ -49,5 +50,8 @@ export class AppComponent
 
   public adicionar(): number {
     return this.valor++;
+  }
+  public destruirComponent(): void {
+    this.destruir = false;
   }
 }

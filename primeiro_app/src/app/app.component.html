@@ -1,4 +1,8 @@
-<app-title title="Olá Mundo"></app-title>
+<app-title title="Olá Mundo" *ngIf="destruir"></app-title>
+<br />
+<br />
+<button (click)="destruirComponent()">Destruir componente</button>
+<br />
 {{ valor }}
 <button (click)="adicionar()">Adicionar</button>
 <router-outlet></router-outlet>
