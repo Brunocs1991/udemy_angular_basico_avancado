@@ -10,6 +10,10 @@ export class DataBidingComponent implements OnInit {
   public idade: number = 29;
   public maisUm: number = 1;
 
+  public checkedDisabled: boolean = true;
+  public imgSrc: string =
+    'https://www.developeronrent.com/newcss/images/SVG/hire-angular-developer.png';
+  public imgTitle: string = 'Property Biding';
   constructor() {}
 
   ngOnInit(): void {}
