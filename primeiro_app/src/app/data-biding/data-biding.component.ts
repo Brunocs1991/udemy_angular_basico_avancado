@@ -16,6 +16,8 @@ export class DataBidingComponent implements OnInit {
   public imgTitle: string = 'Property Biding';
 
   public position: { x: number; y: number } = { x: 0, y: 0 };
+
+  public nomeTwo: string = 'Bruno';
   constructor() {}
 
   ngOnInit(): void {}

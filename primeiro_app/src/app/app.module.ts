@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { CicloVidaComponent } from './ciclo-vida/ciclo-vida.component';
 import { DataBidingComponent } from './data-biding/data-biding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { DataBidingComponent } from './data-biding/data-biding.component';
     CicloVidaComponent,
     DataBidingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
