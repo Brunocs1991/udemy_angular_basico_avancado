@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { TitleComponent } from './title/title.component';
 import { CicloVidaComponent } from './ciclo-vida/ciclo-vida.component';
+import { DataBidingComponent } from './data-biding/data-biding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    CicloVidaComponent
+    CicloVidaComponent,
+    DataBidingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
