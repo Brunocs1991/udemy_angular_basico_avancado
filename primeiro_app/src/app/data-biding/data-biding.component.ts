@@ -14,7 +14,19 @@ export class DataBidingComponent implements OnInit {
   public imgSrc: string =
     'https://www.developeronrent.com/newcss/images/SVG/hire-angular-developer.png';
   public imgTitle: string = 'Property Biding';
+
+  public position: { x: number; y: number } = { x: 0, y: 0 };
   constructor() {}
 
   ngOnInit(): void {}
+
+  public alertaInfo(valor: MouseEvent): void {
+    console.log(valor);
+  }
+
+  public mouseMoveTest(valor: MouseEvent): void {
+    // console.log(valor);
+    this.position.x = valor.offsetX;
+    this.position.y = valor.offsetY;
+  }
 }
