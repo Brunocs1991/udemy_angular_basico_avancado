@@ -12,6 +12,7 @@ export class DireativasAtributosComponent implements OnInit {
 
   public nome: string = 'bruno';
   public list: Array<{ nome: string }> = [];
+  public date: Date = new Date();
 
   constructor() {}
 

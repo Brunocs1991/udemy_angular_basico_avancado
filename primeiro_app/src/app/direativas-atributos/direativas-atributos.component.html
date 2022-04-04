@@ -32,4 +32,14 @@
 <h3>Ng Content</h3>
 <hr />
 
-<ng-content select="hr"></ng-content>
+<ng-content select="p"></ng-content>
+
+<h3>Pipes</h3>
+<hr />
+
+<input [(ngModel)]="nome" />
+<button (click)="salvar()">Salvar</button>
+<li *ngFor="let item of list">{{ item.nome | uppercase }}</li>
+<br />
+<br />
+{{ date | date: "dd/MM/yyyy HH:mm:ss" }}
