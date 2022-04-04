@@ -1,0 +1,37 @@
+<h3>Ng if</h3>
+<hr />
+<h1
+  *ngIf="condition; else elseBlock"
+  style="color: white; background-color: forestgreen; text-align: center"
+>
+  True
+</h1>
+<ng-template #elseBlock
+  ><h1 style="color: white; background-color: firebrick; text-align: center">
+    False
+  </h1></ng-template
+>
+<p *ngIf="conditionClick">True</p>
+<p *ngIf="!conditionClick">False</p>
+<button (click)="onClick()">Clicar</button>
+
+<h3>Ng For</h3>
+<hr />
+
+<ul>
+  <li *ngFor="let item of list; let i = index" (click)="onClickEventList(i)">
+    [{{ i }}] - {{ item.nome }} - idade = {{ item.idade }}
+  </li>
+</ul>
+
+<button (click)="onClickAddList()">Add</button>
+
+<h3>Ng Switch</h3>
+<hr />
+<input type="text" [(ngModel)]="nome" />
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'bruno'">Bruno</p>
+  <p *ngSwitchCase="'costa'">Costa</p>
+  <p *ngSwitchCase="'e'">E</p>
+  <p *ngSwitchDefault>Silva</p>
+</div>
