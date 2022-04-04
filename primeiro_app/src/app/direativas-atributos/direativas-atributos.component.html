@@ -1,3 +1,4 @@
+<ng-content select="h1"></ng-content>
 <div *ngIf="nome != 'bruno'">
   <h3>Ng Class</h3>
   <hr />
@@ -27,3 +28,8 @@
 <ng-template ngFor let-item [ngForOf]="list">
   <p>{{ item.nome }}</p>
 </ng-template>
+
+<h3>Ng Content</h3>
+<hr />
+
+<ng-content select="hr"></ng-content>
