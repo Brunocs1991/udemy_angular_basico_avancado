@@ -10,7 +10,7 @@ export class DireativasAtributosComponent implements OnInit {
   public height: string = '20px';
   public backgroundColor: string = 'red';
 
-  public nome: string = '';
+  public nome: string = 'bruno';
   public list: Array<{ nome: string }> = [];
 
   constructor() {}
