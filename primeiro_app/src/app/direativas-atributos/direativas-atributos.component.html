@@ -1,13 +1,22 @@
-<h3>Ng Class</h3>
+<div *ngIf="nome != 'bruno'">
+  <h3>Ng Class</h3>
+  <hr />
+
+  <p [ngClass]="{ active: valor, disabled: !valor }">
+    Aplicando direativa ngClass {{ valor }}
+  </p>
+
+  <h3>Ng Style</h3>
+  <hr />
+
+  <p [ngStyle]="{ height: height, background: backgroundColor }">
+    Aplicando direativa ngClass {{ valor }}
+  </p>
+</div>
+
+<h3>Ng Model</h3>
 <hr />
 
-<p [ngClass]="{ active: valor, disabled: !valor }">
-  Aplicando direativa ngClass {{ valor }}
-</p>
-
-<h3>Ng Style</h3>
-<hr />
-
-<p [ngStyle]="{ height: height, background: backgroundColor }">
-  Aplicando direativa ngClass {{ valor }}
-</p>
+<input [(ngModel)]="nome" />
+<button (click)="salvar()">Salvar</button>
+<li *ngFor="let item of list">{{ item.nome }}</li>

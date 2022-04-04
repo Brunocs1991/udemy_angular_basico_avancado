@@ -10,6 +10,9 @@ export class DireativasAtributosComponent implements OnInit {
   public height: string = '20px';
   public backgroundColor: string = 'red';
 
+  public nome: string = '';
+  public list: Array<{ nome: string }> = [];
+
   constructor() {}
 
   ngOnInit(): void {
@@ -24,5 +27,10 @@ export class DireativasAtributosComponent implements OnInit {
         this.backgroundColor = 'red';
       }
     }, 2000);
+  }
+
+  public salvar() {
+    this.list.push({ nome: this.nome });
+    this.nome = '';
   }
 }
