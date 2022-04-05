@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 import { DireativasAtributosComponent } from './direativas-atributos/direativas-atributos.component';
 import { SharedModule } from './shared/shared.module';
+import { ComunicacaoComponentesComponent } from './comunicacao-componentes/comunicacao-componentes.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SharedModule } from './shared/shared.module';
     DataBidingComponent,
     DiretivasEstruturaisComponent,
     DireativasAtributosComponent,
+    ComunicacaoComponentesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],
