@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public addValue: number = 10;
   constructor() {}
-
-  public add() {
-    this.addValue++;
-  }
 }
