@@ -1,5 +1,6 @@
 import { FoodListService } from './../../services/food-list.service';
 import { Component, OnInit } from '@angular/core';
+import { FoodList } from 'src/app/module/food-list';
 
 @Component({
   selector: 'app-food-list',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-list.component.scss'],
 })
 export class FoodListComponent implements OnInit {
-  public foodList: Array<string> = [];
+  public foodList: FoodList | any;
   constructor(private readonly foodListService: FoodListService) {}
 
   ngOnInit(): void {
-    this.foodList = this.foodListService.foodList();
+    this.foodListService.foodList().subscribe({
+      next: (res) => (this.foodList = res),
+      error: (error) => alert(error.message),
+    });
     this.foodListService.emitEvent.subscribe({
       next: (res: string) => alert(`Adicionado => ${res}`),
       error: (err: string) => console.log(err),
