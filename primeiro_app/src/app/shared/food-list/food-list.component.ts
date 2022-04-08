@@ -8,7 +8,7 @@ import { FoodList } from 'src/app/module/food-list';
   styleUrls: ['./food-list.component.scss'],
 })
 export class FoodListComponent implements OnInit {
-  public foodList: FoodList | any;
+  public foodList: Array<FoodList> = [];
   constructor(private readonly foodListService: FoodListService) {}
 
   ngOnInit(): void {
@@ -17,7 +17,10 @@ export class FoodListComponent implements OnInit {
       error: (error) => alert(error.message),
     });
     this.foodListService.emitEvent.subscribe({
-      next: (res: string) => alert(`Adicionado => ${res}`),
+      next: (res: FoodList) => {
+        alert(`Adicionado => ${res.nome}`);
+        return this.foodList.push(res);
+      },
       error: (err: string) => console.log(err),
     });
   }
