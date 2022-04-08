@@ -36,9 +36,7 @@ export class FoodListComponent implements OnInit {
 
   public foodListEdit(nome: string, id: number) {
     this.foodListService.foodListEdit(nome, id).subscribe({
-      next: (res) => {
-        this.foodList = this.foodList.filter((item) => item.id !== id);
-      },
+      next: (res) => {},
       error: (error) => alert(error.message),
     });
   }
