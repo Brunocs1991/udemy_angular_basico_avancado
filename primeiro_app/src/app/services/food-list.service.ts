@@ -1,5 +1,5 @@
 import { FoodList } from './../module/food-list';
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -9,7 +9,9 @@ import { Observable } from 'rxjs';
 export class FoodListService {
   public emitEvent = new EventEmitter();
  private httpOptions(){
-header:new HttpHandler
+header:new HttpHeaders({
+
+})
  }
   private url: string = 'http://localhost:3000/';
   constructor(private http: HttpClient) {}
