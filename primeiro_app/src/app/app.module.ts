@@ -13,6 +13,7 @@ import { DireativasAtributosComponent } from './direativas-atributos/direativas-
 import { SharedModule } from './shared/shared.module';
 import { ComunicacaoComponentesComponent } from './comunicacao-componentes/comunicacao-componentes.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
     DireativasAtributosComponent,
     ComunicacaoComponentesComponent,
     DiretivasComponent,
+    FormsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],
