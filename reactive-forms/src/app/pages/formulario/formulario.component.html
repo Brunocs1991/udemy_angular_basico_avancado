@@ -1,0 +1,17 @@
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+  <div class="col-6 m-5">
+    <div class="col-6 formGroup">
+      <label>Nome:</label>
+      <input type="text" formControlName="firstName" class="form-control">
+    </div>
+    <div class="col-6 formGroup">
+      <label>Sobrenome:</label>
+      <input type="text" formControlName="lastName" class="form-control">
+    </div>
+
+    <p class="h5">
+      {{cadastroForm.get('firstName')?.value}}
+    </p>
+    <button class="btn btn-primary mx-auto">Enviar</button>
+  </div>
+</form>
