@@ -30,6 +30,20 @@
   <input type="checkbox" name="react" id="angular" ngModel>
   <br>
   <br>
+
+  <select name="comidas" id="comindas" ngModel>
+    <option value="" disabled>Selecione ...</option>
+    <option value="x-salada">X-salada</option>
+    <option value="x-bacon">X-salada</option>
+    <option value="x-coxinha">X-salada</option>
+  </select>
+  <select name="comidas2" id="comindas2" ngModel>
+    <option value="" disabled>Selecione ...</option>
+    <option *ngFor="let item of listComidas" [ngValue]="item">{{item.comida}} - {{item.preco}}</option>
+  </select>
+  <br>
+  <br>
+
 </form>
 <br>
 <br>

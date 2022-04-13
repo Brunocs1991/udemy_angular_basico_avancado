@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsComponent implements OnInit {
 
+  public listComidas: Array<{comida: string, preco: string}>=[
+    {comida: "X-salada", preco: "R$ 10,00"},
+    {comida: "X-bacon", preco: "R$ 20,00"},
+    {comida: "coxinha", preco: "R$ 30,00"}
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
