@@ -3,6 +3,9 @@
     <div class="col-6 formGroup">
       <label>Nome:</label>
       <input type="text" formControlName="firstName" class="form-control">
+      <span *ngIf="cadastroForm.get('firstName')?.errors">
+        Favor adicionar o nome
+      </span>
     </div>
     <div class="col-6 formGroup">
       <label>Sobrenome:</label>
@@ -10,7 +13,7 @@
     </div>
 
     <p class="h5">
-      {{cadastroForm.get('firstName')?.value}}
+      {{cadastroForm.get('firstName')?.errors | json}}
     </p>
     <button class="btn btn-primary mx-auto">Enviar</button>
   </div>
