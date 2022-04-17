@@ -4,7 +4,7 @@
       <label>Nome:</label>
       <input type="text" formControlName="firstName" class="form-control">
       <span
-        *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.touched || cadastroForm.get('firstName')?.dirty)">
+        *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.touched && cadastroForm.get('firstName')?.dirty)">
         Favor adicionar o nome
       </span>
     </div>
