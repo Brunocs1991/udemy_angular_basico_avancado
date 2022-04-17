@@ -16,6 +16,8 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {}
 
   public submitForm() {
-    console.log(this.cadastroForm);
+    if (this.cadastroForm.valid) {
+      console.log(this.cadastroForm);
+    }
   }
 }

@@ -18,6 +18,6 @@
       {{cadastroForm.get('firstName')?.touched | json}}
       {{cadastroForm.get('firstName')?.dirty | json}}
     </p>
-    <button class="btn btn-primary mx-auto">Enviar</button>
+    <button class="btn btn-primary mx-auto" [disabled]="this.cadastroForm.invalid">Enviar</button>
   </div>
 </form>
