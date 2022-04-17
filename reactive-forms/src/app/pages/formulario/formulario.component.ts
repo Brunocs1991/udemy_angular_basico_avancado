@@ -10,7 +10,8 @@ export class FormularioComponent implements OnInit {
   constructor(private fromBuilder: FormBuilder) {}
   public cadastroForm: FormGroup = this.fromBuilder.group({
     firstName: ['', Validators.required],
-    lastName: [''],
+    lastName: ['', [Validators.required, Validators.minLength(5)]],
+    email: ['', [Validators.required, Validators.email]],
   });
 
   ngOnInit(): void {}
@@ -19,5 +20,8 @@ export class FormularioComponent implements OnInit {
     if (this.cadastroForm.valid) {
       console.log(this.cadastroForm);
     }
+  }
+  get f() {
+    return this.cadastroForm.controls;
   }
 }
