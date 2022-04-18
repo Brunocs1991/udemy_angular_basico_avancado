@@ -9,13 +9,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/">Home</a>
+            <a class="nav-link" routerLink="/home" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact: true}" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/sobre">Sobre</a>
+            <a class="nav-link" routerLink="/sobre" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact: true}">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="['/404']">Error</a>
+            <a class="nav-link" [routerLink]="['/404']" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact: true}">Error</a>
           </li>
         </ul>
       </div>
