@@ -15,7 +15,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'sobre',
+    path: 'sobre/:id/:username',
     component: SobreComponent,
   },
   {
